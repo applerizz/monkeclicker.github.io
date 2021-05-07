@@ -2,6 +2,18 @@ h2 {
      text-decoration: line-through;
    }
 
-#shopBackground {
-     background-color: black;
+body {
+     background-color:  #dc3545;
+}
+
+html::-webkit-scrollbar {
+     display: none;
+   }
+
+#countButton:hover{
+     transform: translateY(-2px);
+   }
+
+#countButton:active {
+     transform: translateY(3px);
 }
