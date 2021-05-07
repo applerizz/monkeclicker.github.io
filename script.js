@@ -152,9 +152,9 @@ window.onload = function () {
         }, 250);
     }
 
-       if (localStorage.clickcount == null || undefined) {
-       parseInt(localStorage.getItem('clickcount');
+       if (localStorage.clickcount == null) {
        localStorage.clickcount = 0;
+       document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
        }
 }
 
