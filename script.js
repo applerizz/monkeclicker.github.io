@@ -152,6 +152,10 @@ window.onload = function () {
         }, 250);
     }
 
+       if (localStorage.clickcount == null || undefined) {
+       parseInt(localStorage.getItem('clickcount');
+       localStorage.clickcount = 0;
+       }
 }
 
 window.onbeforeunload = function () {
