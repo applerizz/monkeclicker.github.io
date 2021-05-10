@@ -282,6 +282,9 @@ function buyMultipleCursors() {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 window.onload = function () {
+    
+    alert("You have joined the world's best game\nMonke Clicker was created by Aaron and Charlie in 2021\nmonke")
+    
     if (localStorage.clickcount < 1000) {
         document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
     } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
