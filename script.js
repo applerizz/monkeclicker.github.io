@@ -1,12 +1,26 @@
+parseInt(localStorage.getItem('clickcount'))
 function clickCounter() {
     if (localStorage.clickcount) {
         localStorage.clickcount = Number(localStorage.clickcount) + 1;
     } else {
         localStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+    if (localStorage.clickcount < 1000) {
+        document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+    } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+    }
+    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if (localStorage.clickcount < 1000) {
+    localStorage.kWorker = localStorage.clickcount
+} else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+    window.setInterval(function () {
+        const kWorker = (localStorage.clickcount / 1000).toFixed(2) + "K"
+        localStorage.setItem('kWorker', kWorker)
+    }, 1);
+}
+
 if (localStorage.cursors == null) {
     var cursors = 0
     localStorage.setItem('cursors', cursors)
@@ -43,7 +57,12 @@ function buyCursor() {
         localStorage.clickcount = localStorage.clickcount - cursorCost;
         document.getElementById('cursors').innerHTML = cursorCount;
         document.getElementById('cursorCost').innerHTML = cursorCount;
-        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
+        if (localStorage.clickcount < 1000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+        } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
+        }
 
         window.setInterval(function () {
             clickCounter(cursorCount);
@@ -94,17 +113,140 @@ function buyBanana() {
         localStorage.clickcount = localStorage.clickcount - bananaCost;
         document.getElementById('banana').innerHTML = bananaCount;
         document.getElementById('bananaCost').innerHTML = bananaCost;
-        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
+        if (localStorage.clickcount < 1000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+        } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
+        }
 
         window.setInterval(function () {
             clickCounter(bananaCount);
 
-        }, 250);
+        }, 200);
 
     };
     var nextCost = Math.floor(40 * Math.pow(1.1, bananaCount));
 
     document.getElementById('bananaCost').innerHTML = bananaCost;
+
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+if (localStorage.nursuries == null) {
+    var nursuries = 0
+    localStorage.setItem('nursuries', nursuries)
+}
+
+if (localStorage.nursuries != null) {
+    var nursuries = localStorage.nurseryCount
+}
+
+if (localStorage.nurseryCost == null) {
+    var nurseryCost = Math.floor(200 * Math.pow(1.05, parseInt(localStorage.nursuries)));
+    console.log(nurseryCost)
+
+    localStorage.setItem('nurseryCost', nurseryCost)
+}
+
+var nurseryCost = parseInt(localStorage.nurseryCost)
+var nurseryCount = parseInt(localStorage.getItem('nursuries'))
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function buyNursery() {
+
+    //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
+
+    var nurseryCost = Math.floor(200 * Math.pow(1.05, nurseryCount));
+
+    if (localStorage.clickcount < nurseryCost) {
+
+    } else if (localStorage.clickcount >= nurseryCost) {
+        nurseryCount = nurseryCount + 1;
+
+        localStorage.setItem('nursuries', nurseryCount)
+        localStorage.setItem('nurseryCost', nurseryCost)
+
+        localStorage.clickcount = localStorage.clickcount - nurseryCost;
+        document.getElementById('nursery').innerHTML = nurseryCount;
+        document.getElementById('nurseryCost').innerHTML = nurseryCost;
+        if (localStorage.clickcount < 1000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+        } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
+        }
+
+        window.setInterval(function () {
+            clickCounter(nurseryCount);
+
+        }, 200);
+
+    };
+    var nextCost = Math.floor(200 * Math.pow(1.1, nurseryCount));
+
+    document.getElementById('nurseryCost').innerHTML = nurseryCost;
+
+};
+
+
+
+
+
+
+
+
+
+if (localStorage.tribes == null) {
+    var tribes = 0
+    localStorage.setItem('tribes', tribes)
+}
+
+if (localStorage.tribes != null) {
+    var tribes = localStorage.tribeCount
+}
+
+if (localStorage.tribeCost == null) {
+    var tribeCost = Math.floor(200 * Math.pow(1.05, parseInt(localStorage.tribes)));
+    console.log(tribeCost)
+
+    localStorage.setItem('tribeCost', tribeCost)
+}
+
+var tribeCost = parseInt(localStorage.tribeCost)
+var tribeCount = parseInt(localStorage.getItem('tribes'))
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function buyTribe() {
+
+    //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
+
+    var tribeCost = Math.floor(1000 * Math.pow(1.05, tribeCount));
+
+    if (localStorage.clickcount < tribeCost) {
+
+    } else if (localStorage.clickcount >= tribeCost) {
+        tribeCount = tribeCount + 1;
+
+        localStorage.setItem('tribes', tribeCount)
+        localStorage.setItem('tribeCost', tribeCost)
+
+        localStorage.clickcount = localStorage.clickcount - tribeCost;
+        document.getElementById('tribe').innerHTML = tribeCount;
+        document.getElementById('tribeCost').innerHTML = tribeCost;
+        if (localStorage.clickcount < 1000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+        } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
+        }
+
+        window.setInterval(function () {
+            clickCounter(tribeCount);
+
+        }, 10);
+
+    };
+    var nextCost = Math.floor(1000 * Math.pow(1.1, tribeCount));
+
+    document.getElementById('tribeCost').innerHTML = tribeCost;
 
 };
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -123,34 +265,78 @@ function buyMultipleCursors() {
 }
  */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 window.onload = function () {
-
-    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
-
-    parseInt(localStorage.getItem('clickcount'))
-
-    document.getElementById('cursors').innerHTML = cursorCount
-    document.getElementById('cursorCost').innerHTML = cursorCost
-
-    for (var i = 0; i < cursorCount; i++) {
-        window.setInterval(function () {
-            clickCounter(cursorCount);
-
-        }, 1000);
+    if (localStorage.clickcount < 1000) {
+        document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+    } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
     }
-    
+    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
+}
 
-    document.getElementById('banana').innerHTML = bananaCount
-    document.getElementById('bananaCost').innerHTML = bananaCost
+parseInt(localStorage.getItem('clickcount'))
 
-    for (var i = 0; i < bananaCount; i++) {
-        window.setInterval(function () {
+document.getElementById('cursors').innerHTML = cursorCount
+document.getElementById('cursorCost').innerHTML = cursorCost
 
-            clickCounter(bananaCount);
+for (var i = 0; i < cursorCount; i++) {
+    window.setInterval(function () {
+        clickCounter(cursorCount);
 
-        }, 250);
-    }
+    }, 1000);
+}
+
+document.getElementById('banana').innerHTML = bananaCount
+document.getElementById('bananaCost').innerHTML = bananaCost
+
+for (var i = 0; i < bananaCount; i++) {
+    window.setInterval(function () {
+
+        clickCounter(bananaCount);
+    }, 200);
+}
+
+document.getElementById('nursery').innerHTML = nurseryCount
+document.getElementById('nurseryCost').innerHTML = nurseryCost
+
+for (var i = 0; i < nurseryCount; i++) {
+    window.setInterval(function () {
+
+        clickCounter(nurseryCount);
+    }, 50);
+}
+
+document.getElementById('tribe').innerHTML = tribeCount
+document.getElementById('tribeCost').innerHTML = tribeCost
+
+for (var i = 0; i < tribeCount; i++) {
+    window.setInterval(function () {
+
+        clickCounter(tribeCount);
+    }, 10);
+}
+
+if (localStorage.clickcount < 1000) {
+    localStorage.clickcount = localStorage.clickcount
+    console.log('e')
+} else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+    window.setInterval(function () {
+        const kWorker = (localStorage.clickcount / 1000).toFixed(3) + "K"
+    }, 1);
 }
 
 window.onbeforeunload = function () {
