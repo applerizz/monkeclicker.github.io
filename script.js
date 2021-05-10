@@ -207,7 +207,7 @@ if (localStorage.tribes != null) {
 }
 
 if (localStorage.tribeCost == null) {
-    var tribeCost = Math.floor(200 * Math.pow(1.05, parseInt(localStorage.tribes)));
+    var tribeCost = Math.floor(1000 * Math.pow(1.05, parseInt(localStorage.tribes)));
     console.log(tribeCost)
 
     localStorage.setItem('tribeCost', tribeCost)
