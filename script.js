@@ -336,7 +336,7 @@ if (localStorage.clickcount < 1000) {
     console.log('e')
 } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
     window.setInterval(function () {
-        const kWorker = (localStorage.clickcount / 1000).toFixed(3) + "K"
+        const kWorker = (localStorage.clickcount / 1000).toFixed(2) + "K"
     }, 1);
 }
 
