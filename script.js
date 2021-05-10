@@ -283,7 +283,7 @@ function buyMultipleCursors() {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 window.onload = function () {
     
-    alert("You have joined the world's best game\nMonke Clicker was created by Aaron and Charlie in 2021\nmonke")
+    alert("You have joined the world's best game\n\nMonke Clicker was created by Aaron and Charlie in 2021\n\nmonke")
     
     if (localStorage.clickcount < 1000) {
         document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
