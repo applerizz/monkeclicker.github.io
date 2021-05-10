@@ -2,6 +2,7 @@ parseInt(localStorage.getItem('clickcount'))
 function clickCounter() {
     if (localStorage.clickcount) {
         localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        console.log(testCost)
     } else {
         localStorage.clickcount = 1;
     }
@@ -39,18 +40,18 @@ if (localStorage.cursorCost == null) {
 
 var cursorCost = parseInt(localStorage.cursorCost)
 var cursorCount = parseInt(localStorage.getItem('cursors'))
+var testCost = 0
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function buyCursor() {
 
     //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
-
     var cursorCost = Math.floor(10 * Math.pow(1.05, cursorCount));
 
     if (localStorage.clickcount < cursorCost) {
 
     } else if (localStorage.clickcount >= cursorCost) {
         cursorCount = cursorCount + 1;
-
+         testCost = testCost + 1;
         localStorage.setItem('cursors', cursorCount)
         localStorage.setItem('cursorCost', cursorCost)
 
