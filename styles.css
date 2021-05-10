@@ -1,19 +1,107 @@
+
+
 h2 {
      text-decoration: line-through;
    }
 
 body {
-     background-color:  #dc3545;
+background-color: #836c59;
+opacity: 0.8;
 }
 
 html::-webkit-scrollbar {
      display: none;
    }
 
+#countButton {
+     display: inline-block;
+     vertical-align: middle;
+     -webkit-transform: perspective(1px) translateZ(0);
+     transform: perspective(1px) translateZ(0);
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     -webkit-transition-property: transform;
+     transition-property: transform;
+}
+
 #countButton:hover{
-     transform: translateY(-2px);
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
    }
 
 #countButton:active {
-     transform: translateY(3px);
+     -webkit-transform: scale(0.99);
+     transform: scale(0.9);
+}
+
+#buy {
+     border: none;
+     font-size: 20px;
+}
+#divcursor {
+     z-index: 1;
+     font-size: 20px;
+     position:relative;
+     float: right;
+     padding-left: 30px;
+}
+
+#buyBanana {
+     border: none;
+     font-size: 20px;
+}
+#bananacursor {
+     font-size: 20px;
+     position:relative;
+     float: right;
+     padding-left: 30px;
+}
+
+#buyNursery {
+     border: none;
+     font-size: 20px;
+}
+#nurserycursor {
+     font-size: 20px;
+     position:relative;
+     float: right;
+     padding-left: 30px;
+}
+
+#buyTribe {
+     border: none;
+     font-size: 20px;
+}
+#tribecursor {
+     font-size: 20px;
+     position:relative;
+     float: right;
+     padding-left: 30px;
+}
+
+#buyZoo {
+     border: none;
+     font-size: 20px;
+}
+#zoocursor {
+     font-size: 20px;
+     position:relative;
+     float: right;
+     padding-left: 30px;
+}
+
+#buyJungle {
+     border: none;
+     font-size: 20px;
+}
+#junglecursor {
+     font-size: 20px;
+     position:relative;
+     float: right;
+     padding-left: 30px;
+}
+
+#widthTest {
+     height: max-content;
 }
