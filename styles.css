@@ -1,13 +1,18 @@
-
+@font-face {
+  font-family: pixelFont;
+  src: url(Pixeled.ttf);
+}
 
 h2 {
      text-decoration: line-through;
+     font-family:  pixelFont;
    }
 
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+	font-family:  pixelFont;
 }
 
 @keyframes gradient {
@@ -36,21 +41,25 @@ html::-webkit-scrollbar {
      transition-duration: 0.3s;
      -webkit-transition-property: transform;
      transition-property: transform;
+     font-family:  pixelFont;
 }
 
 #countButton:hover{
      -webkit-transform: scale(1.1);
      transform: scale(1.1);
+     font-family:  pixelFont;
    }
 
 #countButton:active {
      -webkit-transform: scale(0.99);
      transform: scale(0.9);
+     font-family:  pixelFont;
 }
 
 #buy {
      border: none;
      font-size: 20px;
+     font-family:  pixelFont;
 }
 #divcursor {
      z-index: 1;
@@ -58,61 +67,72 @@ html::-webkit-scrollbar {
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family:  pixelFont;
 }
 
 #buyBanana {
      border: none;
      font-size: 20px;
+     font-family:  pixelFont;
 }
 #bananacursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family:  pixelFont;
 }
 
 #buyNursery {
      border: none;
      font-size: 20px;
+     font-family:  pixelFont;
 }
 #nurserycursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family:  pixelFont;
 }
 
 #buyTribe {
      border: none;
      font-size: 20px;
+     font-family:  pixelFont;
 }
 #tribecursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family:  pixelFont;
 }
 
 #buyZoo {
      border: none;
      font-size: 20px;
+     font-family:  pixelFont;
 }
 #zoocursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family:  pixelFont;
 }
 
 #buyJungle {
      border: none;
      font-size: 20px;
+     font-family:  pixelFont;
 }
 #junglecursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family:  pixelFont;
 }
 
 #widthTest {
