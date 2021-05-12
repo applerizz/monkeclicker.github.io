@@ -107,10 +107,31 @@ html::-webkit-scrollbar {
 }
 
 #buyBanana {
-     border: none;
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
      font-size: 20px;
+     border:0;
      font-family: gulim;
+     cursor: crosshair;
 }
+#buyBanana:hover, #buyBanana:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: gulim;
+     cursor: crosshair;
+}
+
+#buyBanana:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: gulim;
+     cursor: crosshair;
+}
+
 #bananacursor {
      font-size: 20px;
      position:relative;
@@ -120,10 +141,31 @@ html::-webkit-scrollbar {
 }
 
 #buyNursery {
-     border: none;
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
      font-size: 20px;
+     border:0;
      font-family: gulim;
+     cursor: crosshair;
 }
+#buyNursery:hover, #buyNursery:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: gulim;
+     cursor: crosshair;
+}
+
+#buyNursery:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: gulim;
+     cursor: crosshair;
+}
+
 #nurserycursor {
      font-size: 20px;
      position:relative;
@@ -133,10 +175,31 @@ html::-webkit-scrollbar {
 }
 
 #buyTribe {
-     border: none;
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
      font-size: 20px;
+     border:0;
      font-family: gulim;
+     cursor: crosshair;
 }
+#buyTribe:hover, #buyTribe:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: gulim;
+     cursor: crosshair;
+}
+
+#buyTribe:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: gulim;
+     cursor: crosshair;
+}
+
 #tribecursor {
      font-size: 20px;
      position:relative;
@@ -146,10 +209,31 @@ html::-webkit-scrollbar {
 }
 
 #buyZoo {
-     border: none;
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
      font-size: 20px;
+     border:0;
      font-family: gulim;
+     cursor: crosshair;
 }
+#buyZoo:hover, #buyZoo:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: gulim;
+     cursor: crosshair;
+}
+
+#buyZoo:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: gulim;
+     cursor: crosshair;
+}
+
 #zoocursor {
      font-size: 20px;
      position:relative;
@@ -159,10 +243,31 @@ html::-webkit-scrollbar {
 }
 
 #buyJungle {
-     border: none;
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
      font-size: 20px;
+     border:0;
      font-family: gulim;
+     cursor: crosshair;
 }
+#buyJungle:hover, #buyJungle:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: gulim;
+     cursor: crosshair;
+}
+
+#buyJungle:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: gulim;
+     cursor: crosshair;
+}
+
 #junglecursor {
      font-size: 20px;
      position:relative;
