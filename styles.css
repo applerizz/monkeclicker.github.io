@@ -3,6 +3,11 @@
   src: url(fonts/Pixeled.ttf);
 }
 
+@font-face {
+  font-family: gulim;
+  src: url(fonts/210 GulimOTF 090.otf)
+}
+
 h2 {
      text-decoration: line-through;
    }
@@ -69,6 +74,7 @@ html::-webkit-scrollbar {
 #buy {
      border: none;
      font-size: 20px;
+     font-family: gulim;
 }
 #divcursor {
      z-index: 1;
@@ -76,61 +82,72 @@ html::-webkit-scrollbar {
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family: gulim;
 }
 
 #buyBanana {
      border: none;
      font-size: 20px;
+     font-family: gulim;
 }
 #bananacursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family: gulim;
 }
 
 #buyNursery {
      border: none;
      font-size: 20px;
+     font-family: gulim;
 }
 #nurserycursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family: gulim;
 }
 
 #buyTribe {
      border: none;
      font-size: 20px;
+     font-family: gulim;
 }
 #tribecursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family: gulim;
 }
 
 #buyZoo {
      border: none;
      font-size: 20px;
+     font-family: gulim;
 }
 #zoocursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family: gulim;
 }
 
 #buyJungle {
      border: none;
      font-size: 20px;
+     font-family: gulim;
 }
 #junglecursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
+     font-family: gulim;
 }
 
 #widthTest {
