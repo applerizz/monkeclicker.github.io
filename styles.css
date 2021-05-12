@@ -10,24 +10,29 @@
 
 h2 {
      text-decoration: line-through;
+     cursor: crosshair;
    }
 
 h1 {
      font-family: pixelFont;
+     cursor: crosshair;
 }
 
 #monker {
      font-family: pixelFont;
+     cursor: crosshair;
 }
 
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+     cursor: crosshair;
 }
 
 #result {
      font-family: pixelFont;
+     cursor: crosshair;
 }
 
 @keyframes gradient {
@@ -44,6 +49,7 @@ body {
 
 html::-webkit-scrollbar {
      display: none;
+     cursor: crosshair;
    }
 
 #countButton {
@@ -57,18 +63,21 @@ html::-webkit-scrollbar {
      -webkit-transition-property: transform;
      transition-property: transform;
      font-family:  pixelFont;
+     cursor: crosshair;
 }
 
 #countButton:hover{
      -webkit-transform: scale(1.1);
      transform: scale(1.1);
      font-family:  pixelFont;
+     cursor: crosshair;
    }
 
 #countButton:active {
      -webkit-transform: scale(0.99);
      transform: scale(0.9);
      font-family:  pixelFont;
+     cursor: crosshair;
 }
 
 #buy {
