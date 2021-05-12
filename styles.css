@@ -8,6 +8,10 @@
   src: url(fonts/gulim.otf)
 }
 
+html {
+     cursor: crosshair;
+}
+
 h2 {
      text-decoration: line-through;
      cursor: crosshair;
