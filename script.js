@@ -250,6 +250,68 @@ function buyTribe() {
     document.getElementById('tribeCost').innerHTML = tribeCost;
 
 };
+
+
+
+
+
+
+
+
+
+if (localStorage.zoos == null) {
+    var zoos = 0
+    localStorage.setItem('zoos', zoos)
+}
+
+if (localStorage.zoos != null) {
+    var zoos = localStorage.zooCount
+}
+
+if (localStorage.zooCost == null) {
+    var zooCost = Math.floor(10000 * Math.pow(1.05, parseInt(localStorage.zoos)));
+    console.log(zooCost)
+
+    localStorage.setItem('zooCost', zooCost)
+}
+
+var zooCost = parseInt(localStorage.zooCost)
+var zooCount = parseInt(localStorage.getItem('zoos'))
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function buyZoo() {
+
+    //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
+
+    var zooCost = Math.floor(10000 * Math.pow(1.05, zooCount));
+
+    if (localStorage.clickcount < zooCost) {
+
+    } else if (localStorage.clickcount >= zooCost) {
+        zooCount = zooCount + 1;
+
+        localStorage.setItem('zoos', zooCount)
+        localStorage.setItem('zooCost', zooCost)
+
+        localStorage.clickcount = localStorage.clickcount - zooCost;
+        document.getElementById('zoo').innerHTML = zooCount;
+        document.getElementById('zooCost').innerHTML = zooCost;
+        if (localStorage.clickcount < 1000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+        } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
+            document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kWorker + " times";
+        }
+
+        window.setInterval(function () {
+            clickCounter(zooCount);
+
+        }, 10);
+
+    };
+    var nextCost = Math.floor(10000 * Math.pow(1.1, zooCount));
+
+    document.getElementById('zooCost').innerHTML = zooCost;
+
+};
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 function buyMultipleCursors() {
@@ -331,6 +393,16 @@ for (var i = 0; i < tribeCount; i++) {
     window.setInterval(function () {
 
         clickCounter(tribeCount);
+    }, 10);
+}
+
+document.getElementById('zoo').innerHTML = zooCount
+document.getElementById('zooCost').innerHTML = zooCost
+
+for (var i = 0; i < zooCount; i++) {
+    window.setInterval(function () {
+
+        clickCounter(zooCount);
     }, 10);
 }
 
