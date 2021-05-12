@@ -59,7 +59,6 @@ html::-webkit-scrollbar {
 #buy {
      border: none;
      font-size: 20px;
-     font-family:  pixelFont;
 }
 #divcursor {
      z-index: 1;
@@ -67,72 +66,61 @@ html::-webkit-scrollbar {
      position:relative;
      float: right;
      padding-left: 30px;
-     font-family:  pixelFont;
 }
 
 #buyBanana {
      border: none;
      font-size: 20px;
-     font-family:  pixelFont;
 }
 #bananacursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
-     font-family:  pixelFont;
 }
 
 #buyNursery {
      border: none;
      font-size: 20px;
-     font-family:  pixelFont;
 }
 #nurserycursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
-     font-family:  pixelFont;
 }
 
 #buyTribe {
      border: none;
      font-size: 20px;
-     font-family:  pixelFont;
 }
 #tribecursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
-     font-family:  pixelFont;
 }
 
 #buyZoo {
      border: none;
      font-size: 20px;
-     font-family:  pixelFont;
 }
 #zoocursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
-     font-family:  pixelFont;
 }
 
 #buyJungle {
      border: none;
      font-size: 20px;
-     font-family:  pixelFont;
 }
 #junglecursor {
      font-size: 20px;
      position:relative;
      float: right;
      padding-left: 30px;
-     font-family:  pixelFont;
 }
 
 #widthTest {
