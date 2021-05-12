@@ -304,7 +304,7 @@ function buyZoo() {
         window.setInterval(function () {
             clickCounter(zooCount);
 
-        }, 10);
+        }, 5);
 
     };
     var nextCost = Math.floor(10000 * Math.pow(1.1, zooCount));
@@ -403,7 +403,7 @@ for (var i = 0; i < zooCount; i++) {
     window.setInterval(function () {
 
         clickCounter(zooCount);
-    }, 10);
+    }, 5);
 }
 
 if (localStorage.clickcount < 1000) {
