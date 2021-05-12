@@ -302,9 +302,9 @@ function buyZoo() {
         }
 
         window.setInterval(function () {
-            clickCounter(zooCount);
+            localStorage.clickCount + Math.pow(1000, zooCount)
 
-        }, 1);
+        }, 1000);
 
     };
     var nextCost = Math.floor(10000 * Math.pow(1.1, zooCount));
@@ -402,8 +402,8 @@ document.getElementById('zooCost').innerHTML = zooCost
 for (var i = 0; i < zooCount; i++) {
     window.setInterval(function () {
 
-        clickCounter(zooCount);
-    }, 1);
+            localStorage.clickCount + Math.pow(1000, zooCount)
+    }, 1000);
 }
 
 if (localStorage.clickcount < 1000) {
