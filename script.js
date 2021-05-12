@@ -18,8 +18,13 @@ if (localStorage.clickcount < 1000) {
 } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
     window.setInterval(function () {
         const kWorker = (localStorage.clickcount / 1000).toFixed(2) + "K"
-        localStorage.setItem('kWorker', kWorker)
+        return localStorage.setItem('kWorker', kWorker)
     }, 1);
+} else if (localStorage.clickcount >= 1000000 && localStorage.clickcount < 1000000000) {
+    window.setInterval(function () {
+        const kWorker = (localStorage.clickcount / 1000000).toFixed(2) + "M"
+        return localStorage.setItem('kWorker', kWorker)
+    }
 }
 
 if (localStorage.cursors == null) {
@@ -335,12 +340,17 @@ for (var i = 0; i < tribeCount; i++) {
 }
 
 if (localStorage.clickcount < 1000) {
-    localStorage.clickcount = localStorage.clickcount
-    console.log('e')
+    localStorage.kWorker = localStorage.clickcount
 } else if (localStorage.clickcount >= 1000 && localStorage.clickcount < 1000000) {
     window.setInterval(function () {
         const kWorker = (localStorage.clickcount / 1000).toFixed(2) + "K"
+        return localStorage.setItem('kWorker', kWorker)
     }, 1);
+} else if (localStorage.clickcount >= 1000000 && localStorage.clickcount < 1000000000) {
+    window.setInterval(function () {
+        const kWorker = (localStorage.clickcount / 1000000).toFixed(2) + "M"
+        return localStorage.setItem('kWorker', kWorker)
+    }
 }
 
 window.onbeforeunload = function () {
