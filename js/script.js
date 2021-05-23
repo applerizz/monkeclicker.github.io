@@ -52,11 +52,11 @@ function monkeyPressed2() {
 
 
 
-  function enterGame () {
+function enterGame() {
     var nameInput = document.getElementById("nameInput").value
     var everything = document.getElementById("everything")
     var testSubject = document.getElementById("testSubject")
-    
+
     if (entirePage.style.display === "none" && nameInput.length != 0) {
         var z = nameInput
         localStorage.setItem('name', z)
@@ -66,28 +66,28 @@ function monkeyPressed2() {
 
         if (!localStorage.logged) {
             localStorage.setItem('logged', 'placeholder')
-        } 
-    }else if (nameInput.length == 0) {
+        }
+    } else if (nameInput.length == 0) {
         console.log('test')
         var z = "Anonymous"
         localStorage.setItem('name', z)
-    } 
+    }
 };
 
 
-window.onload = function () {
-         if (localStorage.logged === 'placeholder') {
-            var entirePage = document.getElementById("entirePage")
-            var everything = document.getElementById("everything")
-            entirePage.style.display = "flex"
-            everything.style.display = "none"
-        }
-        var testSubject = document.getElementById("testSubject")
-        testSubject.innerHTML = localStorage.name
+window.onload = function() {
+    if (localStorage.logged === 'placeholder') {
+        var entirePage = document.getElementById("entirePage")
+        var everything = document.getElementById("everything")
+        entirePage.style.display = "flex"
+        everything.style.display = "none"
+    }
+    var testSubject = document.getElementById("testSubject")
+    testSubject.innerHTML = localStorage.name
 
-        if (localStorage.getItem('disabled') === 'true'){
-            document.getElementById("disabled").disabled = true;
-        }
+    if (localStorage.getItem('disabled') === 'true') {
+        document.getElementById("disabled").disabled = true;
+    }
 
     if (monkes < 1000) {
         result.innerHTML = "There are " + monkes + " monkes"
@@ -97,4 +97,3 @@ window.onload = function () {
         result.innerHTML = "There are " + (monkes / 1000000).toFixed(2) + "M monkes"
     }
 }
-
