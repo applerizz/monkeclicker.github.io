@@ -1,5 +1,6 @@
 var nameInput = document.getElementById("nameInput").value
 var entirePage = document.getElementById("entirePage")
+var testSubject = document.getElementById("testSubject")
 
 if (!localStorage.monkes) {
     var monkes = 0
@@ -56,6 +57,8 @@ function monkeyPressed2() {
     var everything = document.getElementById("everything")
 
     if (entirePage.style.display === "none" && nameInput.length != 0) {
+        var z = nameInput
+        localStorage.setItem('name', z)
         entirePage.style.display = "flex"
         everything.style.display = "none"
     }else if (nameInput.length == 0) {
@@ -75,7 +78,9 @@ window.onload = function () {
             entirePage.style.display = "flex"
             everything.style.display = "none"
         }
-    
+        
+        testSubject.innerHTML = localStorage.name
+
         if (localStorage.getItem('disabled') === 'true'){
             document.getElementById("disabled").disabled = true;
         }
