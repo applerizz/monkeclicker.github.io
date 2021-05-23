@@ -24,7 +24,7 @@ document.getElementById("disabled").disabled = false;
 
 function monkeyPressed() {
     parseInt(localStorage.monkes)
-    monkes = monkes + adder
+    monkes = monkes + Number(localStorage.adder)
     localStorage.setItem('monkes', monkes)
 
     if (monkes < 1000) {
@@ -67,7 +67,14 @@ function monkeyPressed2() {
 
 
 window.onload = function () {
-
+        if (!localStorage.logged) {
+            localStorage.setItem('logged', 'placeholder')
+        } else if (localStorage.logged === 'placeholder') {
+            var entirePage = document.getElementById("entirePage")
+            var everything = document.getElementById("everything")
+            entirePage.style.display = "flex"
+            everything.style.display = "none"
+        }
     
         if (localStorage.getItem('disabled') === 'true'){
             document.getElementById("disabled").disabled = true;
