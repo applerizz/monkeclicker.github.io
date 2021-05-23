@@ -82,17 +82,15 @@ body{
 	border-radius: 4px;
 }
 
-#gameName {
-  font-size: 40px;
-}
+
 
 #gameName {
-	font-size: 130px;
+	font-size: 60px;
 	margin-bottom: -25px;
 }
 
 #gameName2 {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 #blankSpace {
