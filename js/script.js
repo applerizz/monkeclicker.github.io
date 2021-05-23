@@ -74,6 +74,9 @@ function enterGame() {
     }
 };
 
+$(window).on("load", function () {
+$(".loader-container").delay(5000).fadeOut(1000)
+});
 
 window.onload = function() {
     if (localStorage.logged === 'placeholder') {
