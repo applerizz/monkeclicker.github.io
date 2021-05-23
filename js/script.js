@@ -63,6 +63,10 @@ function monkeyPressed2() {
         testSubject.innerHTML = localStorage.name
         entirePage.style.display = "flex"
         everything.style.display = "none"
+
+        if (!localStorage.logged) {
+            localStorage.setItem('logged', 'placeholder')
+        } 
     }else if (nameInput.length == 0) {
         console.log('test')
         var z = "Anonymous"
@@ -72,9 +76,7 @@ function monkeyPressed2() {
 
 
 window.onload = function () {
-        if (!localStorage.logged) {
-            localStorage.setItem('logged', 'placeholder')
-        } else if (localStorage.logged === 'placeholder') {
+         if (localStorage.logged === 'placeholder') {
             var entirePage = document.getElementById("entirePage")
             var everything = document.getElementById("everything")
             entirePage.style.display = "flex"
