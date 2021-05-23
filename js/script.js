@@ -55,10 +55,12 @@ function monkeyPressed2() {
   function enterGame () {
     var nameInput = document.getElementById("nameInput").value
     var everything = document.getElementById("everything")
-
+    var testSubject = document.getElementById("testSubject")
+    
     if (entirePage.style.display === "none" && nameInput.length != 0) {
         var z = nameInput
         localStorage.setItem('name', z)
+        testSubject.innerHTML = localStorage.name
         entirePage.style.display = "flex"
         everything.style.display = "none"
     }else if (nameInput.length == 0) {
@@ -78,7 +80,7 @@ window.onload = function () {
             entirePage.style.display = "flex"
             everything.style.display = "none"
         }
-        
+        var testSubject = document.getElementById("testSubject")
         testSubject.innerHTML = localStorage.name
 
         if (localStorage.getItem('disabled') === 'true'){
