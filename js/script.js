@@ -55,9 +55,10 @@ function monkeyPressed3() {
     if (monkes >= 500) {
         monkes = monkes - 500
         result.innerHTML = "There are " + monkes + " monkes"
-        localStorage.setItem('adder", '5')
+        localStorage.setItem('adder', '5')
         localStorage.setItem('disabled2', 'true')
     }
+
     if (localStorage.getItem('disabled2') === 'true') {
         document.getElementById("disabled2").disabled = true
     }
