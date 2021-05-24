@@ -157,6 +157,7 @@ p{
 
 .imageRotate:active {
     animation: Animation2 1s;
+    transform: scale(0.8);
     font-family:  pixelFont;
 }
 
