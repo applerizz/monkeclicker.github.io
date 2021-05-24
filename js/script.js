@@ -20,6 +20,7 @@ if (!localStorage.adder) {
 
 var result = document.getElementById("result")
 document.getElementById("disabled").disabled = false;
+document.getElementById("disabled2").disabled = false;
 
 
 
@@ -47,6 +48,18 @@ function monkeyPressed2() {
 
     if (localStorage.getItem('disabled') === 'true') {
         document.getElementById("disabled").disabled = true
+    }
+}
+
+function monkeyPressed3() {
+    if (monkes >= 500) {
+        monkes = monkes - 500
+        result.innerHTML = "There are " + monkes + " monkes"
+        localStorage.setItem('adder", '5')
+        localStorage.setItem('disabled2', 'true')
+    }
+    if (localStorage.getItem('disabled2') === 'true') {
+        document.getElementById("disabled2").disabled = true
     }
 }
 
@@ -92,6 +105,10 @@ window.onload = function() {
     if (localStorage.getItem('disabled') === 'true') {
         document.getElementById("disabled").disabled = true;
     }
+    
+    if (localStorage.getItem('disabled2') === 'true') {
+        document.getElementById("disabled2").disabled = true;
+    }   
 
     if (monkes < 1000) {
         result.innerHTML = "There are " + monkes + " monkes"
