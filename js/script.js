@@ -32,16 +32,18 @@ function monkeyPressed() {
     if (monkes < 1000) {
         result.innerHTML = "There are " + monkes + " monkes"
     } else if (monkes >= 1000 && monkes < 1000000) {
-        result.innerHTML = "There are " + (monkes / 1000).toFixed(2) + "K monkes"
+        localStorage.setItem('kWorker', (monkes / 1000).toFixed(2)) 
+        result.innerHTML = "There are " + localStorage.kWorker + "K monkes"
     } else if (monkes >= 1000000 && monkes < 1000000000) {
-        result.innerHTML = "There are " + (monkes / 1000000).toFixed(2) + "M monkes"
+        localStorage.setItem('mWorker', (monkes / 1000000).toFixed(2))
+        result.innerHTML = "There are " + localStorage.mWorker + "M monkes"
     }
 }
 
 function monkeyPressed2() {
     if (monkes >= 10) {
         monkes = monkes - 10
-        result.innerHTML = "There are " + monkes + " monkes"
+        result.innerHTML = "There are " + localStorage.kWorker + " monkes"
         localStorage.setItem('adder', '2')
         localStorage.setItem('disabled', 'true')
     }
@@ -54,7 +56,7 @@ function monkeyPressed2() {
 function monkeyPressed3() {
     if (monkes >= 500) {
         monkes = monkes - 500
-        result.innerHTML = "There are " + monkes + " monkes"
+        result.innerHTML = "There are " + localStorage.kWorker + " monkes"
         localStorage.setItem('adder', '5')
         localStorage.setItem('disabled2', 'true')
     }
