@@ -75,6 +75,7 @@ function enterGame() {
 };
 
 $(window).on("load", function () {
+$(".entirePage").delay(5000).fadeIn(1000)
 $(".loader-container").delay(5000).fadeOut(1000)
 });
 
