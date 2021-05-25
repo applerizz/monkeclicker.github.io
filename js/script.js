@@ -63,7 +63,6 @@ function monkeyPressed2() {
 
 function monkeyPressed3() {
     if (monkes >= 500) {
-        monkes = monkes - 500
         if (monkes < 1000) {
         monkes = monkes - 500
         result.innerHTML = "There are " + localStorage.monkes + " monkes"
@@ -86,7 +85,6 @@ function monkeyPressed3() {
 
 function monkeyPressed4() {
     if (monkes >= 2500) {
-        monkes = monkes - 2500
         if (monkes < 1000) {
         monkes = monkes - 2500
         result.innerHTML = "There are " + localStorage.monkes + " monkes"
