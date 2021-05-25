@@ -35,7 +35,7 @@ function monkeyPressed() {
         localStorage.setItem('kWorker', (monkes / 1000).toFixed(2) + 'K')
         result.innerHTML = "There are " + localStorage.kWorker + "K monkes"
     } else if (monkes >= 1000000 && monkes < 1000000000) {
-        localStorage.setItem('mWorker', (monkes / 1000000).toFixed(2))
+        localStorage.setItem('mWorker', (monkes / 1000000).toFixed(2) + 'M')
         result.innerHTML = "There are " + localStorage.mWorker + "M monkes"
     }
 }
