@@ -41,7 +41,7 @@ function monkeyPressed() {
 }
 
 function monkeyPressed2() {
-    if monkes >= 10) {
+    if (monkes >= 10) {
     if (monkes < 1000) {
         monkes = monkes - 10
         result.innerHTML = "There are " + monkes + " monkes"
