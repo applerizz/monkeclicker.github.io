@@ -21,7 +21,7 @@ if (!localStorage.adder) {
 var result = document.getElementById("result")
 document.getElementById("disabled").disabled = false;
 document.getElementById("disabled2").disabled = false;
-
+document.getElementById("disabled3").disabled = false;
 
 
 function monkeyPressed() {
@@ -35,15 +35,15 @@ function monkeyPressed() {
         localStorage.setItem('kWorker', (monkes / 1000).toFixed(2)) 
         result.innerHTML = "There are " + localStorage.kWorker + "K monkes"
     } else if (monkes >= 1000000 && monkes < 1000000000) {
-        localStorage.setItem('mWorker', (monkes / 1000000).toFixed(2))
-        result.innerHTML = "There are " + localStorage.mWorker + "M monkes"
+        localStorage.setItem('kWorker', (monkes / 1000000).toFixed(2))
+        result.innerHTML = "There are " + localStorage.kWorker + "M monkes"
     }
 }
 
 function monkeyPressed2() {
     if (monkes >= 10) {
         monkes = monkes - 10
-        result.innerHTML = "There are " + localStorage.kWorker + " monkes"
+        result.innerHTML = "There are " + localStorage.kWorker + "K monkes"
         localStorage.setItem('adder', '2')
         localStorage.setItem('disabled', 'true')
     }
@@ -56,13 +56,26 @@ function monkeyPressed2() {
 function monkeyPressed3() {
     if (monkes >= 500) {
         monkes = monkes - 500
-        result.innerHTML = "There are " + localStorage.kWorker + " monkes"
+        result.innerHTML = "There are " + localStorage.kWorker + "K monkes"
         localStorage.setItem('adder', '5')
         localStorage.setItem('disabled2', 'true')
     }
 
     if (localStorage.getItem('disabled2') === 'true') {
         document.getElementById("disabled2").disabled = true
+    }
+}
+
+function monkeyPressed4() {
+    if (monkes >= 2500) {
+        monkes = monkes - 2500
+        result.innerHTML = "There are " + localStorage.kWorker + "K monkes"
+        localStorage.setItem('adder', '25')
+        localStorage.setItem('disabled3', 'true')
+    }
+
+    if (localStorage.getItem('disabled3') === 'true') {
+        document.getElementById("disabled3").disabled = true
     }
 }
 
@@ -111,6 +124,10 @@ window.onload = function() {
     
     if (localStorage.getItem('disabled2') === 'true') {
         document.getElementById("disabled2").disabled = true;
+    }   
+    
+    if (localStorage.getItem('disabled3') === 'true') {
+        document.getElementById("disabled3").disabled = true;
     }   
 
     if (monkes < 1000) {
