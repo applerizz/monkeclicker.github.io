@@ -165,3 +165,5 @@ window.onload = function() {
         result.innerHTML = "There are " + (monkes / 1000000).toFixed(2) + "M monkes"
     }
 }
+
+window.onbeforeunload = function() {return}
