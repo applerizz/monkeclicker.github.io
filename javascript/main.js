@@ -15,6 +15,7 @@ document.getElementById("cursorImage").addEventListener('click', btn1.btnPressed
 document.getElementById("upgrade1").addEventListener('click', btn1.upgrade1)
 document.getElementById("upgrade2").addEventListener('click', btn1.upgrade2)
 
+
 window.onload = function () {
     if (btn1.buttonValue == 0) {
         btn1.cursorCount()
