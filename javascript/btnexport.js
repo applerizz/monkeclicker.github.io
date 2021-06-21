@@ -9,11 +9,20 @@ class btn {
 
     cursorCount() {
         const cursorCount = document.getElementById("cursorCount")
-        cursorCount.innerHTML = "Cursor Count: " + btn1.buttonValue.toLocaleString()
-        document.title = btn1.buttonValue.toLocaleString() + " " + "Cursors"
+
+        if (btn1.buttonValue >= 1000) {
+            var string = numeral(btn1.buttonValue).format('0a,0.00');
+            cursorCount.innerHTML = "Cursor Count: " + string
+            document.title = string + " " + "Cursors"
+        }
+        if (btn1.buttonValue < 1000) {
+            var string2 = numeral(btn1.buttonValue).format('0')
+            cursorCount.innerHTML = "Cursor Count: " + string2
+            document.title = string2 + " " + "Cursors"
+        }
     }
 
- 
+
     btnPressed() {
         btn1.buttonValue = btn1.buttonValue += btn1.adder;
         btn1.cursorCount()
@@ -108,6 +117,7 @@ class btn {
         document.getElementById("farmerCost1").innerHTML = farmerCost
         btn1.cursorCount()
     }
+
 }
 
 

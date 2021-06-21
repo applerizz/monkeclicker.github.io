@@ -21,12 +21,10 @@ document.getElementById("upgrade3").addEventListener('click', btn1.upgrade3)
 document.getElementById("autoclicker1").addEventListener('click', btn1.autoclicker1)
 document.getElementById("autoclicker2").addEventListener('click', btn1.autoclicker2)
 
-
 window.onload = function () {
     if (btn1.buttonValue == 0) {
         btn1.cursorCount()
     }
-
     document.getElementById("autoclickerAmount1").innerHTML = btn1.cursorAmount
     document.getElementById("autoclickerCost1").innerHTML = 50
 
