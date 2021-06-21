@@ -22,6 +22,8 @@ document.getElementById("autoclicker2").addEventListener('click', btn1.autoclick
 document.getElementById("autoclicker3").addEventListener('click', btn1.autoclicker3)
 
 document.getElementById("ascend").addEventListener('click', btn1.ascendPressed)
+document.getElementById("reset").addEventListener('click', btn1.reset)
+
 
 window.onload = function () {
     if (btn1.buttonValue == 0) {

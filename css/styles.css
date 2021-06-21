@@ -122,3 +122,7 @@ html {
 		visibility: hidden;
 	}
 }
+
+#reset {
+	margin-top: 10px;
+}

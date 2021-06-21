@@ -204,6 +204,20 @@ export default class btn {
         btn1.cursorCount()
     }
 
+    reset() {
+        let prompt1 = prompt("Are you sure you want to reset?", "yes")
+
+        if (prompt1.toLowerCase() == "yes") {
+            alert("Your progress was reset.")
+            btn1.buttonValue = btn1.buttonValue - btn1.buttonValue
+            btn1.cursorCount()
+        } else if (prompt1.toLowerCase() != "yes" || prompt1.toLowerCase() == null) {
+            alert("Your progress was NOT reset.")
+        }
+
+        prompt1
+    }
+
 }
 
 
