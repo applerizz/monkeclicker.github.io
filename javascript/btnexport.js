@@ -91,20 +91,20 @@ class btn {
     autoclicker2() {
         var farmerCost = Math.floor(250 * Math.pow(1.09, btn1.farmerAmount))
         if (btn1.buttonValue >= farmerCost) {
-            btn1.cursorAmount = btn1.cursorAmount + 1
+            btn1.farmerAmount = btn1.farmerAmount + 1
             btn1.buttonValue = btn1.buttonValue - farmerCost
 
-            var farmerCost = Math.floor(250 * Math.pow(1.09, btn1.cursorAmount))
+            var farmerCost = Math.floor(250 * Math.pow(1.09, btn1.farmerAmount))
 
 
             window.setInterval(function () {
-                btn1.btnPressed(btn1.cursorAmount);
+                btn1.btnPressed(btn1.farmerAmount);
 
             }, 500);
         } else if (btn1.buttonValue < farmerCost) {
             return
         }
-        document.getElementById("farmerAmount1").innerHTML = btn1.cursorAmount
+        document.getElementById("farmerAmount1").innerHTML = btn1.farmerAmount
         document.getElementById("farmerCost1").innerHTML = farmerCost
         btn1.cursorCount()
     }

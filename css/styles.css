@@ -1,7 +1,7 @@
 body {
     background-color: pink;
     overflow: hidden;
-    touch-action: manipulation;
+	touch-action: manipulation;
 }
 
 #cursorImage:active {
