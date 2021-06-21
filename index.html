@@ -6,7 +6,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <title></title>
+        <title>0 Cursors</title>
+        <link rel="shortcut icon" href="./images/cursor.png"/>
     </head>
     <body>
 
@@ -14,7 +15,8 @@
             <div class="row">
                 <div class="text-center">
                     <nav>
-                        <h1 id="wrapper">Welcome to<div id="myGame"></h1>
+                        <h1 id="wrapper">
+                            <div id="myGame"></h1>
                         </nav>
                     </div>
                     <!--Column 1-->
@@ -22,10 +24,8 @@
                         <div class="text-center">
                             <h2>Cursor Count</h2>
                             <br>
-                            <input id="cursorImage" type="image" src="images/cursor.png" wdith="10%" height="10%">
-                            <div>Cursor Count:
-                                <div id="cursorCount"></div>
-                            </div>
+                            <input id="cursorImage" type="image" src="images/cursor.png" wdith="20%" height="20%">
+                            <div id="cursorCount"></div>
 
                         </div>
                     </div>
@@ -33,12 +33,22 @@
                     <div class="col-4" id="secondColumn">
                         <div class="text-center">
                             <h2>Upgrades</h2>
+                            <br>
+                            <button id="buy1" disabled>1</button>
+                            <button id="buy10" disabled>10</button>
+                            <button id="buy100" disabled>100</button>
+                            <br>
+                            <br>
                             <div id="upgrade1">
                                 <button class="upgrades" id="upgrade1">-10 Cursors, +2 per click</button>
                                 <br><br>
                             </div>
                             <div id="upgrade2">
-                                <button class="upgrades" id="ugrade2">-100 Cursors, +5 per click</button>
+                                <button class="upgrades" id="ugrade2">-500 Cursors, +5 per click</button>
+                                <br><br>
+                            </div>
+                            <div id="upgrade3">
+                                <button class="upgrades" id="ugrade3">-2500 Cursors, +8 per click</button>
                                 <br><br>
                             </div>
                         </div>
@@ -47,6 +57,22 @@
                     <div class="col-4">
                         <div class="text-center">
                             <h2>Autoclickers</h1>
+                            <br>
+                            <button id="buy1" disabled>1</button>
+                            <button id="buy10" disabled>10</button>
+                            <button id="buy100" disabled>100</button>
+                            <br>
+                            <br>
+
+                            <div id="autoclicker1">
+                                <button class="upgrades" id="autoclicker1"><span id="autoclickerAmount1"></span> Autoclickers, Cost: <span id="autoclickerCost1"></span></button>
+                                <br><br>
+                            </div>
+                            
+                            <div id="autoclicker2">
+                                <button class="upgrades" id="autoclicker2"><span id="farmerAmount1"></span> Farmers, Cost: <span id="farmerCost1"></span></button>
+                                <br><br>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,4 +81,4 @@
             <script type="module" src="./javascript/btnexport.js"></script>
         </body>
     </body>
-</html></body></html>
+</html>
