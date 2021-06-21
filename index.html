@@ -7,7 +7,7 @@
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://monkeclicker.github.io/index.html"/>
         <meta property="og:image" content="https://monkeclicker.github.io/images/cursor.png"/>
-        <meta property="og:description" content="This is a simple clicker game coded with vanilla es6. Charles Oberlander, a ninth grader, got bored over the summer and decided to start this project. He hopes that it will become widely known as a good game. All source code is at https://github.com/monkeclicker/monkeclicker.github.io. He hopes you have a nice day :)" />
+        <meta property="og:description" content="This is a simple clicker game coded with vanilla es6. Charles Oberlander, a ninth grader, got bored over the summer and decided to start this project. He hopes that it will become widely known as a good game. All source code is at https://github.com/monkeclicker/monkeclicker.github.io. He hopes you have a nice day :)"/>
         <meta property="og:locale" content="en"/>
         <meta name="theme-color" content="#5539cc">
         <link href="./libs/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,15 @@
         <link rel="shortcut icon" href="./images/cursor.png"/>
     </head>
     <body>
+
+        <div class="alert alert-success" role="alert" id="alert">
+            <h4 class="alert-heading">You Have Ascended!</h4>
+            <hr>
+            <img src="./images/ascending.gif" alt="ascending" style="width:96px;height:96px;float:left;">
+            <p class="mb-0" style="justify-content: center;">&nbsp;+10 Per Click
+                <br></p>
+
+        </div>
 
         <div class="container-fluid">
             <div class="row">
@@ -32,92 +41,109 @@
                                     <div class="w3-container">
                                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                                         <h1>About</h1>
-                                        <p>Monkey Clicker is a fun and addictive clicker game coded by a 9th grade student by the name of Charles Oberlander. Monkey Clicker is a game coded in pure ES6 Javascript, with a couple library's which follow: Bootstrap, W3CSS, and jQuery. He hopes that one day this website will become popular and people all around the world can pass time by playing this.
+                                        <p>Monkey Clicker is a fun and addictive clicker game coded by a 9th grade student by the name of Charles Oberlander. Monkey Clicker is a game coded in pure ES6 Javascript, with a couple libraries which follow: Bootstrap, W3CSS, and jQuery. He hopes that one day this website will become popular and people all around the world can pass time by playing this.
                                             <h1>Info</h1>
-                                            <p>The first section, "Cursor Count," is where you click the image of a monkey to get score. The "upgrades" section allows you to buy cursors in exchange for a higher cursor rate per click. The third section, "Autoclickers," clicks for you, but at an exponential cost. Have a fun time playing this game!</p>
-                                            <h1>Suggestions/Contact</h1>
-                                            <p>Charles is wide open for sugestions! You can send him a message through email in the "contact" section. <span class="alert alert-warning">[In Progress]</span></p>
                                         </p>
-                                    </div>
+                                        <p>The first section, "Cursor Count," is where you click the image of a monkey to get score. The "upgrades" section allows you to buy cursors in exchange for a higher cursor rate per click. The third section, "Autoclickers," clicks for you, but at an exponential cost. Have a fun time playing this game!</p>
+                                        <h1>Suggestions/Contact</h1>
+                                        <p>Charles is wide open for sugestions! You can send him a message through email in the "contact" section.
+                                            <span class="alert alert-warning">[In Progress]</span>
+                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-
-
-                        <h1 id="wrapper">
-                            <div id="myGame"></h1>
-                            <img src="/images/monkeynav.png" width="100px" height="100  px">
-                        </nav>
                     </div>
-                    <!--Column 1-->
-                    <div class="col-4" id="firstColumn">
-                        <div class="text-center">
-                            <h2>Cursor Count</h2>
-                            <br>
-                            <input id="cursorImage" type="image" src="images/monke.png" wdith="50%" height="50%">
+
+
+                    <h1 id="wrapper">
+                        <div id="myGame"></h1>
+                        <img src="/images/monkeynav.png" width="100px" height="100  px">
+                    </nav>
+                </div>
+                <!--Column 1-->
+                <div class="col-4" id="firstColumn">
+                    <div class="text-center">
+                        <h2>Cursor Count</h2>
+                        <br>
+                        <input id="cursorImage" type="image" src="images/monke.png" width="256" height="256">
+                        <br><br>
+                        <div id="cursorCount"></div>
+
+                    </div>
+                </div>
+                <!--Column 2-->
+                <div class="col-4" id="secondColumn">
+                    <div class="text-center">
+                        <h2>Upgrades</h2>
+
+                        <div id="upgrade1">
+                            <button class="upgrades" id="upgrade1">-10 Cursors, +2 per click</button>
                             <br><br>
-                            <div id="cursorCount"></div>
-
                         </div>
-                    </div>
-                    <!--Column 2-->
-                    <div class="col-4" id="secondColumn">
-                        <div class="text-center">
-                            <h2>Upgrades</h2>
-                            <br>
-                            <button id="buy1" disabled>1</button>
-                            <button id="buy10" disabled>10</button>
-                            <button id="buy100" disabled>100</button>
-                            <br>
-                            <br>
-                            <div id="upgrade1">
-                                <button class="upgrades" id="upgrade1">-10 Cursors, +2 per click</button>
-                                <br><br>
-                            </div>
-                            <div id="upgrade2">
-                                <button class="upgrades" id="ugrade2">-500 Cursors, +5 per click</button>
-                                <br><br>
-                            </div>
-                            <div id="upgrade3">
-                                <button class="upgrades" id="ugrade3">-2500 Cursors, +8 per click</button>
-                                <br><br>
-                            </div>
+                        <div id="upgrade2">
+                            <button class="upgrades" id="ugrade2">-500 Cursors, +5 per click</button>
+                            <br><br>
                         </div>
+                        <div id="upgrade3">
+                            <button class="upgrades" id="ugrade3">-2500 Cursors, +8 per click</button>
+                            <br><br>
+                        </div>
+                        <br>
+                        <button disabled id="ascend">Ascend: 50K</button>
                     </div>
-                    <!--Column 3-->
-                    <div class="col-4">
-                        <div class="text-center">
-                            <h2>Autoclickers</h1>
-                            <br>
-                            <button id="buy1" disabled>1</button>
-                            <button id="buy10" disabled>10</button>
-                            <button id="buy100" disabled>100</button>
-                            <br>
-                            <br>
+                </div>
+                <!--Column 3-->
+                <div class="col-4" id="thirdColumn">
+                    <div class="text-center">
+                        <h2>Autoclickers</h1>
+                        <button id="buy1" disabled>1</button>
+                        <button id="buy10" disabled>10</button>
+                        <button id="buy100" disabled>100</button>
+                        <br>
+                        <br>
 
-                            <div id="autoclicker1">
-                                <button class="upgrades" id="autoclicker1">
-                                    <span id="autoclickerAmount1"></span>
-                                    Autoclickers, Cost:
-                                    <span id="autoclickerCost1"></span>
-                                </button>
-                                <br><br>
-                            </div>
+                        <div id="autoclicker1">
+                            <button class="upgrades" id="autoclicker1">
+                                <span id="autoclickerAmount1"></span>
+                                Autoclickers, Cost:
+                                <span id="autoclickerCost1"></span>
+                            </button>
+                            <br><br>
+                        </div>
 
-                            <div id="autoclicker2">
-                                <button class="upgrades" id="autoclicker2">
-                                    <span id="farmerAmount1"></span>
-                                    Farmers, Cost:
-                                    <span id="farmerCost1"></span>
-                                </button>
-                                <br><br>
-                            </div>
+                        <div id="autoclicker2">
+                            <button class="upgrades" id="autoclicker2">
+                                <span id="farmerAmount1"></span>
+                                Farmers, Cost:
+                                <span id="farmerCost1"></span>
+                            </button>
+                            <br><br>
+                        </div>
+
+                        <div id="autoclicker3">
+                            <button class="upgrades" id="autoclicker3">
+                                <span id="storeAmount1"></span>
+                                Stores, Cost:
+                                <span id="storeCost1"></span>
+                            </button>
+                            <br><br>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-2" id="fourthColumn">
+                    <h1>Boosts</h1>
+                </div>
+                <div class="col-2" id="fifthColumn">
+                    <h1>Store</h1>
+                </div>
+                <div class="col-2" id="sixthColumn">
+                    <h1>Stats</h1>
+                </div>
             </div>
-            <script type="module" src="./javascript/main.js"></script>
-            <script type="module" src="./javascript/btnexport.js"></script>
-        </body>
+        </div>
+        <script type="module" src="./javascript/main.js"></script>
+        <script type="module" src="./javascript/btnexport.js"></script>
     </body>
-</html>
+</html></body></html>
