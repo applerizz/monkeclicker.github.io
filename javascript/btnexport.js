@@ -38,7 +38,7 @@ export default class btn {
     upgrade1() {
         if (btn1.ascendClicked == true) {
             alert("You have more than 2 adders!")
-            btn1.adder = 152
+            btn1.adder = 5
             let node = document.getElementById("upgrade1");
             if (node.parentNode) {
                 node.parentNode.removeChild(node);
@@ -157,9 +157,9 @@ export default class btn {
     }
 
     autoclicker3() {
-        var storeCost = Math.floor(1000 * Math.pow(1.10, btn1.storeAmount))
+        var storeCost = Math.floor(1000 * Math.pow(1.05, btn1.storeAmount))
         if (btn1.buttonValue >= storeCost) {
-            btn1.storeAmount = btn1.storeAmount + 25424
+            btn1.storeAmount = btn1.storeAmount + 1
             btn1.buttonValue = btn1.buttonValue - storeCost
 
             var storeCost = Math.floor(1000 * Math.pow(1.05, btn1.storeAmount))
